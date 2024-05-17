@@ -1,0 +1,93 @@
+{
+  "name": "mongodonM4",
+  "version": "2.0.4",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "tap test/**/*.test.js",
+    "build:table": "node ./app/services/createpdf2/createTable.js",
+    "prebuild:pdf": "npm run build:table",
+    "build:pdf": "node ./app/services/createpdf2/createPdf.js",
+    "start4": "node ./app/services/createpdf2/createTable.js",
+    "start5": "node ./app/services/createpdf2/createPdf.js",
+    "start2": "node  ./app/services/createpdf/createTable.js",
+    "start3": "node  server.js",
+    "startxx": "pm2 start server.js",
+    "startf": "./node_modules/.bin/fastify server.js",
+    "startx": "fastify start authentication.js -l debug -P",
+    "dev": "node_modules/.bin/nodemon server.js -l info -P",
+    "serve": "nodemon server.js",
+    "build1tablebadref": "node ./app/servicbes/createpdfBase/createTable.js",
+    "build1table": "node ./app/services/createpdfBase/createTable.js",
+    "build1pdf": "node ./app/services/createpdfBase/createPdf.js",
+    "build1table2": "node ./app/services/createpdfBase/createTable2.js",
+    "build1pdf2": "node ./app/services/createpdfBase/createPdf2.js",
+    "buildmerge": "node ./app/services/createpdfBase/createMerge.js",
+    "start": "npm-run-all -s build1table build1table2 build1pdf  build1pdf2 buildmerge ",
+    "start1": "npm-run-all -s build1table build1pdf build1table2 build1pdf2 buildmerge "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattduffield/mongodon.git"
+  },
+  "author": "Matt Duffield <matt.duffield@gmail.com> (http://mattduffield.wordpress.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mattduffield/mongodon/issues"
+  },
+  "homepage": "https://github.com/mattduffield/mongodon#readme",
+  "dependencies": {
+    "@chilkat/ck-node16-win64": "^9.50.90",
+    "@fastify/autoload": "^5.7.1",
+    "@fastify/cookie": "^6.0.0",
+    "@fastify/cors": "^8.3.0",
+    "@fastify/jwt": "^7.2.1",
+    "@fastify/mongodb": "^7.0.0",
+    "@fastify/multipart": "^7.7.3",
+    "@fastify/session": "^10.4.0",
+    "@fastify/static": "^6.10.2",
+    "@fastify/swagger": "^8.9.0",
+    "@fastify/swagger-ui": "^1.9.3",
+    "@fastify/websocket": "^8.2.0",
+ 
+    "bcryptjs": "^2.4.3",
+    "busboy": "^1.6.0",
+    "checkit": "^0.7.0",
+    "clientjs": "^0.2.1",
+  
+    "dayjs": "^1.10.5",
+
+    "dotenv": "^8.0.0",
+    "exceljs": "^4.2.1",
+    "fastify": "^4.21.0",
+    "fastify-cli": "^5.8.0",
+    "fastify-favicon": "^4.3.0",
+    "fastify-nodemailer": "^5.0.0",
+    "fastify-plugin": "^3.0.0",
+    "fastify-socket.io": "^5.0.0",
+    "fastify-totp": "^0.3.0",
+    "fs-extra": "^10.0.0",
+    "global": "^4.4.0",
+
+    "lodash": "^4.17.21",
+    "make-promises-safe": "^5.0.0",
+    "moment": "^2.29.4",
+    "node-expat": "^2.4.0",
+  
+    "node-gyp": "^9.4.0",
+    "nodemon": "^3.0.1",
+    "npm-run-all": "^4.1.5",
+ 
+    "pg": "^8.7.1",
+    "pino": "^7.6.5",
+  
+    "save-dev": "^0.0.1-security",
+    
+    "socket.io": "^4.7.5",
+   
+    "yargs-parser": "^13.1.1"
+  },
+  "engines": {
+    "node": ">=10"
+  }
+}

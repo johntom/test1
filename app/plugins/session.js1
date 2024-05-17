@@ -1,0 +1,51 @@
+ 'use strict'
+
+const fp = require('fastify-plugin');
+// // const fastifySession = require('fastify-session')
+// // const fastifyCookie = require('fastify-cookie')
+
+// const fastifySession = require('fastify-session')
+// const fastifyCookie  = require('@fastify/cookie');
+// // const fastifySession = require('@mgcrea/fastify-session');
+
+const fastifySession = require('@fastify/session');
+const fastifyCookie = require('@fastify/cookie');
+
+module.exports = fp(async (fastify, opts) => {
+//   const corsOpts = Object.assign ({}, {
+//     origin: '*',
+//     methods: ['DELETE','GET','POST','PUT']
+//   }, opts.cors);
+fastify.register(fastifyCookie);
+// const sOpts = Object.assign ({}, {
+
+//     cookieName: 'sessionId',
+//     secret: 'a secret with minimum length of 32 characters',
+//     cookie: { secure: false },
+//     expires: 1800000
+//   })
+
+//   fastify.register(fastifySession, sOpts);
+ });
+
+
+// 'use strict'
+// //const fastify = require('fastify');
+// const fp = require('fastify-plugin');
+
+// const fastifySession = require('fastify-session');
+// const fastifyCookie = require('fastify-cookie');
+
+// // const app = fastify();
+// module.exports = fp(async (fastify, opts) => {
+//   fastify.register(fastifyCookie);
+// // app.register(fastifySession, {secret: 'a secret with minimum length of 32 characters'});
+// // Store data in the session by adding it to the session decorator at the request:
+
+// fastify.register(fastifySession, {secret: 'a secret with minimum length of 32 characters'});
+// fastify.addHook('preHandler', (request, reply, next) => {
+//   request.session.user = {name: 'max'};
+//   next();
+// })
+// // fastify.register(fastifySession, sOpts);
+// });

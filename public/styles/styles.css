@@ -1,0 +1,136 @@
+#my-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 28px;
+    margin-top: -14px;
+    margin-left: -100px;
+    border: solid 1px #800000;  
+    background-color: chartreuse ;
+  }
+  body {
+    color: rgb(0,0,255);
+  }
+
+
+  * {
+    margin: 20px;
+    padding: 20px;
+    }
+    
+    #mojage-content{
+      margin: auto;
+      margin-top: 20px;
+      margin-left: 40px;
+      padding: 20px;
+      width: 80%;
+      border: solid 1.5px #8f5050;  
+     
+    }
+    #jrt-content{
+        margin: auto;
+        margin-top: 20px;
+        margin-left: 40px;
+        padding: 20px;
+        width: 80%;
+        border: solid 5.5px blueviolet;  
+       
+      }
+    /* ALL ELEMENTS */
+:where(*) {
+  /* tailwind vars */
+/*   --tw-ring-color: hsla(200, 50%, 50%, var(--tw-ring-opacity, 1));   */
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0
+    calc(var(--tw-ring-width) + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  --tw-ring-offset-shadow: 0 0 0 var(--tw-ring-offset-width)
+    var(--tw-ring-offset-color);
+  /* defaults */
+  padding: 0;
+  margin: 0;
+  border-style: solid;
+  border-color: currentColor;
+  border-width: 0;
+  border-radius: 1px;
+  appearance: none;
+  scroll-behavior: smooth;
+  list-style: none;
+  line-height: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  scroll-snap-type: both proximity;
+  transition-property: all;
+  transition-duration: 150ms;
+  transition-timing-function: ease-out;
+}
+:is(*, ._.hack) {
+  --tw-ring-width: 0px;
+  --tw-ring-offset-width: 0px;
+  /* sets box shadow OVER tailwind */
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow),
+    var(--tw-shadow);
+}
+/* INLINE ELEMENTS */
+:where(a, abbr, acronym, b, bdi, bdo, big, br, canvas, cite, code, data, datalist, del, dfn, em, i, ins, kbd, map, mark, output, p, q, ruby, s, samp, slot, small, span, strong, sub, sup, time, u, tt, var, wbr) {
+  display: inline;
+}
+/* HIDDEN ELEMENTS */
+:is(.hidden, [hidden], script, template, style, link, meta, head, ::marker) {
+  display: none;
+}
+/* ANCHOR ELEMENTS */
+a:is([href]:hover){
+  color: blue;
+}
+
+/* PSUEDO */
+:where(*::placeholder) {
+}
+/* FOCUSABLE */
+:where(summary, input, select, textarea, a[href], button, area, [tabindex]):not(:where(:disabled, [disabled], [hidden], [tabindex="-1"])) {
+  transition-property: all;
+  transition-duration: 75ms;
+  transition-timing-function: ease-out;
+  cursor: pointer;
+  outline: 2px solid transparent;
+}
+/* FOCUSABLE HOVERED */
+:where(:where(summary, input, select, textarea, a[href], button, area, [tabindex]):not(:where(:disabled, [disabled], [hidden], [tabindex="-1"])):hover) {
+  --tw-ring-width: 2px;
+}
+:where(*:focus) {
+  --tw-ring-width: 4px !important;
+}
+:where(*:focus:active) {
+  --tw-ring-offset-width: 2px;
+  --tw-ring-width: 6px;
+}
+
+/* TAILWIND OVERWRITES */
+.ring-0 {
+  --tw-ring-width: 0px;
+}
+.ring-1 {
+  --tw-ring-width: 1px;
+}
+.ring-2 {
+  --tw-ring-width: 2px;
+}
+.ring-4 {
+  --tw-ring-width: 4px;
+}
+.ring-8 {
+  --tw-ring-width: 8px;
+}
+.ring {
+  --tw-ring-width: 3px;
+}
+
+/* CUSTOM UTILS */
+.snap-start {
+  scroll-snap-align: start;
+}
+.snap-center {
+  scroll-snap-align: center;
+}
